@@ -1,31 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmanon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 11:34:38 by nmanon            #+#    #+#             */
-/*   Updated: 2016/08/11 00:53:32 by nmanon           ###   ########.fr       */
+/*   Created: 2016/11/13 05:53:52 by nmanon            #+#    #+#             */
+/*   Updated: 2016/11/13 05:53:53 by nmanon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/ft.h"
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+int		ft_strlen(char *str)
 {
-	unsigned int i;
+	int i;
 
 	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dest[i] = src[i];
+	while (str[i] != '\0')
 		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (i);
 }
+
+char	*ft_strdup(char *str)
+{
+	char	*ret;
+	int		i;
+
+	i = 0;
+	if ((ret = (char *)malloc(ft_strlen(str) + 1)))
+	{
+		while (str[i] != '\0')
+		{
+			ret[i] = str[i];
+			i++;
+		}
+		ret[i] = '\0';
+		return (ret);
+	}
+	return (0);
+}
+

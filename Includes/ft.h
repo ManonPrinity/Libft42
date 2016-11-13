@@ -14,6 +14,8 @@
 # define FT_H
 
 # include <unistd.h>
+# include <string.h>
+#
 
 void	ft_putchar(char c);
 void	ft_putstr(char *str);
@@ -31,5 +33,13 @@ char	*ft_strstr(char *str, char *to_find);
 char	*ft_strcpy(char *dest, char *src);
 char	*ft_strncpy(char *dest, char *src, unsigned int n);
 void	ft_swap(int *a, int *b);
+void	*ft_memset (void *b, int c, size_t len);
+void	ft_bzero(void *s, size_t n);
+void	ft_memcpy(void *s1, const void *s2, size_t n);
+void	ft_putchar_fd(char c, int fd);
+void	*memccpy(void *s1, const void *s2, int c, size_t n);
+void	ft_putstr_fd(char const *s, int fd);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memmove(void *s1, const void *s2, size_t n);
 
 #endif

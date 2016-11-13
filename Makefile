@@ -32,7 +32,15 @@ SRC =	Srcs/ft_putchar.c \
 		Srcs/ft_strstr.c \
 		Srcs/ft_strcpy.c \
 		Srcs/ft_strncpy.c \
-		Srcs/ft_swap.c
+		Srcs/ft_swap.c \
+		Srcs/ft_memset.c \
+		Srcs/ft_bzero.c \
+		Srcs/ft_memcpy.c \
+		Srcs/ft_putchar_fd.c \
+		Srcs/ft_memccpy.c \
+		Srcs/ft_memmove.c \
+		Srcs/ft_memcmp.c \
+		Srcs/ft_putstr_fd.c
 
 OBJ =	ft_putchar.o \
 		ft_putstr.o \
@@ -48,7 +56,15 @@ OBJ =	ft_putchar.o \
 		ft_strstr.o \
 		ft_strcpy.o \
 		ft_strncpy.o \
-		ft_swap.o
+		ft_swap.o \
+		ft_memset.o \
+		ft_bzero.o \
+		ft_memcpy.o \
+		ft_putchar_fd.o \
+		ft_memccpy.o \
+		ft_memmove.o \
+		ft_memcmp.o \
+		ft_putstr_fd.o
 
 all: $(NAME)
 

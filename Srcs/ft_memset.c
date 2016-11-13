@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmanon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 11:34:38 by nmanon            #+#    #+#             */
-/*   Updated: 2016/08/11 00:53:32 by nmanon           ###   ########.fr       */
+/*   Created: 2016/11/10 06:35:47 by nmanon            #+#    #+#             */
+/*   Updated: 2016/11/10 06:36:00 by nmanon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/ft.h"
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	*ft_memset (void *b, int c, size_t len)
 {
-	unsigned int i;
+	unsigned char	*cur;
 
-	i = 0;
-	while (i < n && src[i] != '\0')
+	if (len == 0)
+		return(b);
+	cur  = (unsigned char *)b;
+	while (len --)
 	{
-		dest[i] = src[i];
-		i++;
+		*cur = (unsigned char)c;
+		if (len)
+			cur++;
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (b);
 }

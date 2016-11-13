@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nmanon <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 11:34:38 by nmanon            #+#    #+#             */
-/*   Updated: 2016/08/11 00:53:32 by nmanon           ###   ########.fr       */
+/*   Created: 2016/11/11 03:23:48 by nmanon            #+#    #+#             */
+/*   Updated: 2016/11/11 03:23:50 by nmanon           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../Includes/ft.h"
 
-char	*ft_strncpy(char *dest, char *src, unsigned int n)
+void	ft_bzero(void *s, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
-	while (i < n && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
 	while (i < n)
 	{
-		dest[i] = '\0';
+		((char *)s)[i] = 0;
 		i++;
 	}
-	return (dest);
 }
